@@ -27,6 +27,16 @@ html {
   block-size: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .page {
   display: flex;
   justify-content: center;
@@ -81,6 +91,39 @@ html {
   font-weight: normal;
 }
 
+.search-form__label {
+  display: flex;
+  width: fit-content;
+}
+
+.search-form__textfield {
+  border: 1px solid #fff;
+  border-left: none;
+  border-right: none;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  background-color: transparent;
+  appearance: none;
+  min-width: 225px;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 55px 57px;
+}
+
 .search-form__submit-button {
   width: 194px;
   height: 34px;
@@ -127,12 +170,14 @@ html {
 
 .content__video-card {
   display: flex;
-  align-items: start; 
+  align-items: start;
+  justify-content: start;
+  max-width: 390px;
 }
 
 .content__video-card-description-container {
-  /* TODO something is wrong here */
-  flex-grow: 1;
+  flex-grow: 2;
+  overflow: hidden;
 }
 
 .content__video-card-title {
@@ -149,13 +194,15 @@ html {
 .content__video-card-description {
   font-size: 18px;
   line-height: 16.2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
   line-clamp: 1;
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
+  min-width: 194px;
   height: 103px;
-  object-fit: cover;
+  object-fit: fill;
   object-position: center;
 }
 
