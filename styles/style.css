@@ -68,8 +68,8 @@ html {
 
 .result__video-container {
   width: 711px;
-  /* height: 386px; */
   padding-bottom: 10px;
+  position: relative;
 }
 
 .result__video {
@@ -106,6 +106,7 @@ html {
   background-color: transparent;
   appearance: none;
   min-width: 225px;
+  color: #fff;
 }
 
 .search-form__textfield:focus {
@@ -231,6 +232,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 .content__list-container {
   height: 100%;
   overflow-y: scroll;
+  position: relative;
 }
 
 .content__list {
@@ -292,7 +294,11 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   padding-right: 3px;
 }
 
-.content__card-link_current:active{
+.content__list-item:active {
+  background-color: #545050;
+}
+
+.content__card-link_current {
   background-color: #545050;
 }
 
