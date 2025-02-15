@@ -320,7 +320,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 6px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .content__card-link:focus {
