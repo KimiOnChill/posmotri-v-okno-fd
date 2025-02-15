@@ -83,7 +83,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  /* gap: 40px; */
 }
 
 .search-form__fieldset-title {
@@ -94,12 +93,14 @@ html {
 
 .search-form__label {
   display: flex;
+  align-items: center;
   width: fit-content;
 }
 
 .search-form__textfield {
+  color: #fff;
   padding-left: 1px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   border-left: none;
   border-right: none;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -107,7 +108,6 @@ html {
   background-color: transparent;
   appearance: none;
   min-width: 225px;
-  color: #fff;
 }
 
 /* states for labels */
@@ -181,9 +181,9 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 /* buttons */
 .button {
-  background-color: transparent;
-  border: 1px solid #fff;
   color: #fff;
+  background-color: transparent;
+  border: 1px solid currentColor;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -245,7 +245,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .content__list-container {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
 }
 
@@ -298,7 +298,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 .content__video-card-thumbnail {
   min-width: 194px;
   height: 103px;
-  object-fit: fill;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -308,7 +308,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   padding-right: 3px;
 }
 
-.content__list-item:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
@@ -316,18 +316,18 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   background-color: #545050;
 }
 
-.content__list-item:hover {
+.content__card-link:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 6px;
   cursor: pointer
 }
 
-.content__list-item:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__list-item:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1.5px;
 }
