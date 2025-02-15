@@ -28,7 +28,7 @@ html {
 }
 
 .visually-hidden {
-  position: absolute;
+  /* position: absolute; */
   inline-size: 1px;
   block-size: 1px;
   overflow: hidden;
@@ -98,6 +98,7 @@ html {
 }
 
 .search-form__textfield {
+  padding-left: 1px;
   border: 1px solid #fff;
   border-left: none;
   border-right: none;
@@ -109,7 +110,8 @@ html {
   color: #fff;
 }
 
-.search-form__textfield:focus {
+/* states for labels */
+.search-form__label:focus {
   outline: none;
 }
 
@@ -118,6 +120,17 @@ html {
   outline-offset: 1.5px;
 }
 
+/* states for first input */
+.search-form__label:focus .search-form__textfield {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) .search-form__textfield {
+  outline: 1px solid #fff;
+  outline-offset: 1.5px;
+}
+
+/* styling checkboxes */
 .search-form__checkbox-list .search-form__label:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -140,13 +153,14 @@ html {
   margin-right: 5px;
   width: 19px;
   height: 19px;
-  position: relative;
   background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-form__pseudo-checkbox::after {
   content: '';
-  position: absolute;
   background-color: #fff;
   width: 17px;
   height: 17px;
@@ -289,7 +303,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 }
 
 /* cards */
-.content__list-item{
+.content__list-item {
   padding-left: 3px;
   padding-right: 3px;
 }
