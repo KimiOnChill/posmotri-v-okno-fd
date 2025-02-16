@@ -39,8 +39,8 @@ html {
 
 .page {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -52,7 +52,6 @@ html {
 
 .content {
   display: grid;
-  grid-template-rows: 534px;
   grid-template-columns: 711px 399px;
   column-gap: 30px;
   grid-template-areas: 
@@ -93,14 +92,14 @@ html {
 
 .search-form__label {
   display: flex;
-  align-items: center;
   width: fit-content;
+  align-items: center;
 }
 
 .search-form__textfield {
   color: #fff;
-  padding-left: 1px;
   border: 1px solid currentColor;
+  padding-left: 1px;
   border-left: none;
   border-right: none;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -182,8 +181,8 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 /* buttons */
 .button {
   color: #fff;
-  background-color: transparent;
   border: 1px solid currentColor;
+  background-color: transparent;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -244,9 +243,9 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 }
 
 .content__list-container {
-  height: 100%;
-  overflow-y: auto;
+  height: 298px;
   position: relative;
+  overflow-y: auto;
 }
 
 .content__list {
@@ -296,10 +295,10 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 }
 
 .content__video-card-thumbnail {
-  min-width: 194px;
-  height: 103px;
   object-fit: cover;
   object-position: center;
+  min-width: 194px;
+  height: 103px;
 }
 
 /* cards */
